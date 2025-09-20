@@ -116,6 +116,10 @@ html {
     display: none;
 }
 
+.bannerDiv fa-bars{
+    right: 10;
+}
+
 
 
 
@@ -270,6 +274,23 @@ input:checked + label .tabContent{
         cursor: pointer;
     }
 
+
+    .contentContainer {
+        flex-direction: column;
+        height: auto; 
+    }
+    .contentContainer label {
+        flex: unset;  
+        width: 100%;   
+    }
+
+    .tabContent {
+        position: relative; 
+        top: 0;
+        opacity: 1; 
+        z-index: auto;
+    }
+
     .container{
         flex-direction: column;
         gap: 20px;
@@ -281,13 +302,4 @@ input:checked + label .tabContent{
 
 footer{
     background-color: gray;
-}
-
-
-.element{
-    width: 200px;
-    height: 200px;
-    background-color: red;
-    position: sticky;
-    top:0;
 }
