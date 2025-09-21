@@ -203,13 +203,9 @@ input:checked + label .tabContent{
 }
 
 .content h1{
-    font-size: 5em;
+    font-size: 36px;
     text-align: center;
     font-family: "Alan Sans";
-}
-
-.content p{
-    font-size: 1.2em;
 }
 
 
@@ -295,4 +291,5 @@ input:checked + label .tabContent{
 footer{
     background-color: gray;
 }
+
 
