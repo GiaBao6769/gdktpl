@@ -11,6 +11,10 @@
     padding: 0px;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 .bannerDiv{
     width: 100%;
     min-height: 100vh;
@@ -23,7 +27,7 @@
 }
 
 #logoLink img{
-    height: 100px;
+    height: 20vw;
     border-radius: 100px;
     top: 0;
     left: 0;
@@ -50,6 +54,7 @@
 .appendix ul li a{
     color: white;
     text-decoration: none;
+    font-size: 3vw;
 
 }
 
@@ -132,7 +137,7 @@ html {
     position: relative;
     font-family: "Alan Sans";
     flex-wrap: wrap;
-    font-size: clamp(12px, 2vw, 18px);
+    flex: 1 0 auto;
     /* overflow: hidden; */
     /* justify-content: space-evenly; */
 }
@@ -153,27 +158,23 @@ html {
     position: absolute;
     height: 100%;
     padding: 5px 10px;
+    font-size: 2.5vw;
     cursor: pointer;
     transition: 0.25s;
     white-space: nowrap;
-    flex-shrink: 1;
+    
 }
 
 
 
-input:checked + label {
-  flex-grow: 1.5;
-}
 
 input:checked + label .tabName{
     background: rgb(193, 191, 131);
     color: rgb(59, 41, 5);
     font-weight: 800;
-    font-size: clamp(20px, 3vw, 30px);
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     text-align: center;
-    flex: 2;
 }
 
 .tabContent{
@@ -192,6 +193,7 @@ input:checked + label .tabContent{
     z-index: 1;
 }
 
+/* ----Content---- */
 
 .content{
     width: 80%;
@@ -270,9 +272,9 @@ input:checked + label .tabContent{
         transition: 0.3s;
     }     */
 
-    .appendix ul{
+    /* .appendix ul{
         padding: 30px;
-    }
+    } */
 
     /* .bannerDiv .fa-solid{
         display: block;
