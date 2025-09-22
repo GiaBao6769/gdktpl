@@ -153,16 +153,16 @@ html {
     display: none;
 }
 
-.tabName{
+.tabName {
     color: white;
-    position: absolute;
+    display: flex;           
+    align-items: center;
+    justify-content: center;
     height: 100%;
-    padding: 5px 10px;
     font-size: clamp(1vw, 2vw, 18px);
     cursor: pointer;
     transition: 0.25s;
     white-space: nowrap;
-    
 }
 
 
@@ -291,6 +291,7 @@ input:checked + label .tabContent{
 footer{
     background-color: gray;
 }
+
 
 
 
