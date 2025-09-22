@@ -145,7 +145,8 @@ html {
 .contentContainer label{
     flex: 1 0 auto;
     min-width: 0;
-    display: inline-block;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -203,17 +204,17 @@ input:checked + label .tabContent{
 }
 
 .content h1{
-    font-size: 30px;
+    font-size: 36px;
     text-align: center;
     font-family: "Alan Sans";
 }
-
 
 .content img{
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
+    border-radius: 20px;
 }
 
 
@@ -291,7 +292,3 @@ input:checked + label .tabContent{
 footer{
     background-color: gray;
 }
-
-
-
-
