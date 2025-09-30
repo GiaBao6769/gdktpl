@@ -273,7 +273,7 @@
 /* <-----FOOTER-----> */
 footer{
     background-color: rgb(187, 187, 187);
-    padding: 2rem 1rem 2rem 1rem;
+    padding: 2rem 1rem 2rem calc(1rem + min(20vw, 200px));
     font-size: 1rem;
 }
 
@@ -323,9 +323,11 @@ footer{
         padding: 100px 50px 100px 50px;
     }
 
+    footer{
+        padding: 2rem 1rem 2rem 1rem;
+    }
+
     .ideaBox{
         width: 100%;
     }
-
 }
-
