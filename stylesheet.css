@@ -27,7 +27,7 @@
 #banner h1{
     display: block;
     font-size: 3rem;
-    padding: 0px 20vw 0 20vw;
+    padding: 0px 2rem 0 2rem;
 }
 
 #banner p{
@@ -328,3 +328,4 @@ footer{
     }
 
 }
+
