@@ -63,7 +63,7 @@
 .contentSection{
     background-color: rgb(255, 255, 255);
     flex: 1;
-    padding: 100px 50px 300px calc(min(20vw, 200px) + 50px);
+    padding: 100px 50px 100px calc(min(20vw, 200px) + 50px);
     text-align: justify;
 }
 
@@ -246,6 +246,37 @@
     background-color: rgba(0, 0, 0, 0.357);
 }
 
+/* <---Idea Boxes---> */
+
+.ideasDiv{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.ideaBox{
+    border: var(--border);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 0.5rem;
+    width: 40%;
+    transition: 0.3s;
+}
+
+.ideaBox:hover{
+    box-shadow: 0 0 20px 0 rgb(144, 144, 144);
+    transform: translate(-3px, -5px);
+}
+
+
+/* <-----FOOTER-----> */
+footer{
+    background-color: rgb(187, 187, 187);
+    padding: 2rem 1rem 2rem 1rem;
+    font-size: 1rem;
+}
+
 
 /* <-----ANIMATION-----> */
 
@@ -290,5 +321,9 @@
 
     .contentSection{
         padding: 100px 50px 100px 50px;
+    }
+
+    .ideaBox{
+        width: 100%;
     }
 }
