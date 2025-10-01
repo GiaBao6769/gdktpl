@@ -3,7 +3,7 @@
 }
 
 *{
-    font-family: "Alan Sans", sans-serif;
+    font-family: "Verdana";
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -15,27 +15,38 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
     height: 100vh;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: white;
     text-shadow: 2px 2px 5px black;
+    text-align: center;
+
 }
 
-#banner h1{
+#bannerContent{
+    background-color: rgba(84, 84, 84, 0.45);
+    z-index: 100;
+}
+
+#bannerContent h1{
     display: block;
     font-size: 3rem;
-    padding: 0px 2rem 0 2rem;
+    padding: 1rem 2rem 0 2rem;
+    font-family: "Alan Sans", sans-serif;
 }
 
-#banner p{
+#bannerContent p{
     display: block;
-    padding: 30px 10vw 0 10vw;
+    font-size: 1.3rem;
+    padding: 2rem 10vw 1rem 10vw;
 }
 
-/* <-----APPENDIX SECTION */
+/* <-----APPENDIX SECTION-----> */
 
 #appendixSection{
     background-color: lightgray;
@@ -45,16 +56,20 @@
     max-width: 20vw;
     height: 100vh;
     top: 0;
+    list-style: none;   
 }
 
 #appendixSection li{
     display: block;
-    padding: 10px;
+    padding: 1rem;
     font-size: 1.1rem;
     border-bottom: var(--border);
+    cursor: pointer;
 }
 
-#appendixSection li:hover{
+
+
+#appendixSection li:hover, #current{
     background-color: yellow;
 }
 
@@ -148,6 +163,17 @@
     margin: 20px;
 }
 
+.ansIndex{
+    background-color: white;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    border-radius: 2rem;
+    border: var(--border);
+    margin-right: 2rem;
+    flex: 0 0 auto;
+}
+
 .questionBox input[value="right"]:checked + label{
     background-color: rgb(139, 240, 138);
 }
@@ -156,7 +182,7 @@
     background-color: rgb(240, 104, 104);
 }
 
-/* <---Images Div */
+/* <---Images Div---> */
 
 .imagesDiv{
     display: flex;
@@ -307,20 +333,63 @@ footer{
     html{
         font-size: 13px;
     }
+
+    #appendixSection {
+        position: sticky;
+        display: flex;
+        float: none;
+        width: 100%;
+        max-width: 100%;
+        height: 3rem;
+        z-index: 100;
+    }
+
+    #appendixSection ol {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+
+    #appendixSection li {
+        display: inline;
+        /* flex: 1;   */
+        font-size: clamp(0.7rem, 2vw, 1.1rem); 
+        min-width: 0;           
+        text-align: center;
+        border-bottom: none;
+        white-space: nowrap;   
+        overflow: hidden;   
+        text-overflow: ellipsis; 
+        border-right: var(--border);
+    }
+
+    #current{
+        flex-grow: 2;
+    }
+
+
+
     .contentBox1{
         height: 15rem;
     }
 
     .imageTemplate{
         width: 80vw;
-    }
-
-    #appendixSection{
-        display: none;
+        margin: auto;
+        margin-top: 30px;
     }
 
     .contentSection{
         padding: 100px 50px 100px 50px;
+        
+    }
+
+    .chartDialog{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 95vw;
     }
 
     footer{
@@ -329,5 +398,16 @@ footer{
 
     .ideaBox{
         width: 100%;
+    }
+}
+
+
+@media (max-width: 450px){
+    #bannerContent h1{
+        font-size: 2rem;
+    }
+
+    #bannerContent p{
+        font-size: 1rem;
     }
 }

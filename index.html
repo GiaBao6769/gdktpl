@@ -10,17 +10,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=REM:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div id="banner">
-        <h1>PROJECT NAME</h1>
-        <p>Description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum qui autem, mollitia aperiam suscipit neque accusamus quisquam et beatae aspernatur voluptas eveniet, ratione excepturi.</p>
+        <div id="bannerContent">
+            <h1>CÁC TÁC ĐỘNG MÔI TRƯỜNG CỦA HOẠT ĐỘNG DU LỊCH Ở ĐÀ NẴNG</h1>
+            <p>Đà Nẵng là một thành phố nổi tiếng với nhiều địa điểm du lịch sinh thái hấp dẫn. Tuy nhiên, liệu những hoạt động du lịch có tiềm ẩn những ảnh hưởng tiêu cực đến môi trường của thành phố hay không? Chúng ta sẽ cùng nhau tìm hiểu thông qua bài nghiên cứu này.</p>
+        </div>
     </div>
 
     <div id="appendixSection">
         <ol>
-        <li>Appendix 1: What's the problem?</li> 
+        <li id="current">Appendix 1: What's the problem?</li> 
         <li>Appendix 2</li> 
         <li>Appendix 3</li> 
         <li>Appendix 4</li> 
@@ -45,13 +49,28 @@
             </div>
 
             <input type="radio" name="q1" value="right" id="radio1">
-            <label for="radio1">A. Answer 1 (correct)</label>
+            <label for="radio1">
+                <div class="ansIndex">A</div> 
+                <div class="ansContent">Answer 1 I think therefore I am Lorem ips.(correct)</div>
+            </label>
+            
             <input type="radio" name="q1" value="wrong" id="radio2">
-            <label for="radio2">B. Answer 2</label>
+            <label for="radio2">
+                <div class="ansIndex">B</div>
+                <div class="ansContent">Answer 2</div>
+            </label>
+
             <input type="radio" name="q1" value="wrong" id="radio3">
-            <label for="radio3">C. Answer 3</label>
+            <label for="radio3">
+                <div class="ansIndex">C</div>
+                <div class="ansContent">Answer 3</div>
+            </label>
+
             <input type="radio" name="q1" value="wrong" id="radio4">
-            <label for="radio4">D. Answer 4</label>
+            <label for="radio4">
+                <div class="ansIndex">D</div> 
+                <div class="ansContent">Answer 4</div>
+            </label>
         </div>
 
         <div class="imagesDiv divTemplate">
@@ -111,5 +130,4 @@
     </footer>
 
     <script src="jvs.js"></script>
-
 </body>
