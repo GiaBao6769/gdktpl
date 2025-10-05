@@ -1,6 +1,10 @@
-const showBtn1 = document.getElementById('showBtn1');
-const chartDialog1 = document.getElementById('chartDialog1');
-const closeBtn1 = document.getElementById('closeBtn1');
-
-showBtn1.addEventListener('click', () => chartDialog1.showModal());
-closeBtn1.addEventListener('click', () => chartDialog1.close());
+document.addEventListener("DOMContentLoaded", () => {
+  for (let i = 1; i <= 3; i++) {
+        const showBtn = document.getElementById('showBtn' + i);
+        const chartDialog = document.getElementById('chartDialog' + i);
+        const closeBtn = document.getElementById('closeBtn' + i);
+        if (!showBtn || !chartDialog || !closeBtn) continue;
+        showBtn.addEventListener('click', () => chartDialog.showModal());
+        closeBtn.addEventListener('click', () => chartDialog.close());
+  }
+});
