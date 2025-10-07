@@ -85,8 +85,9 @@
 
 #summarySection h1{
     border-bottom: var(--border);
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     font-size: 3rem;
+    text-align: center;
 }
 
 #summaryBox{
@@ -94,6 +95,7 @@
     border: var(--border);
     border-radius: 1rem;
     padding: 1.5rem;
+    margin: 2rem;
 }
 
 #summaryBox ul li{
@@ -624,6 +626,24 @@ footer{
         padding: 2rem 10vw 1rem 10vw;
     }
 
+    #summarySection h1{
+        border-bottom: var(--border);
+        margin-bottom: 3rem;
+        font-size: 2rem;
+    }
+
+    #summaryBox{
+        display: inline-block;
+        border: var(--border);
+        border-radius: 1rem;
+        padding: 1.5rem;
+    }
+
+    #summaryBox ul li{
+        list-style: none; 
+        font-size: 1.5rem;
+    }
+
     #appendixSection {
         position: sticky;
         display: flex;
@@ -865,5 +885,25 @@ footer{
 
     .listBox2 p::before {                                
         width: 0.5rem;
+    }
+
+
+    #summarySection h1{
+        border-bottom: var(--border);
+        margin-bottom: 3rem;
+        font-size: 2.5rem;
+
+    }
+
+    #summaryBox{
+        display: inline-block;
+        border: var(--border);
+        border-radius: 1rem;
+        padding: 1.5rem;
+    }
+
+    #summaryBox ul li{
+        list-style: none; 
+        font-size: 1.5rem;
     }
 }
