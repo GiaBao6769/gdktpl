@@ -1,5 +1,7 @@
 :root{
     --border: 1px solid black;
+    --clr-lightTheme: rgb(182, 234, 244);
+    --clr-darkTheme: rgb(35, 21, 85);
 }
 
 *{
@@ -9,6 +11,29 @@
     margin: 0;
 }
 
+/* <-----Template-----> */
+
+.divTemplate{
+    margin: 2rem;
+}
+
+
+.animatedObj{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.hoverBox{
+    transition: 0.3s;
+}
+
+.hoverBox:hover{
+    box-shadow: 0 0 20px 0 rgb(144, 144, 144);
+    transform: translate(-3px, -5px);
+}
+
+/* <-----> */
 
 
 #banner{
@@ -48,6 +73,46 @@
     padding: 2rem 15vw 1rem 15vw;
 }
 
+#summarySection{
+    height: 100vh;
+    border-top: var(--border);
+    border-bottom: var(--border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#summarySection h1{
+    border-bottom: var(--border);
+    margin-bottom: 3rem;
+    font-size: 3rem;
+}
+
+#summaryBox{
+    display: inline-block;
+    border: var(--border);
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+#summaryBox ul li{
+    list-style: none; 
+    font-size: 2rem;
+}
+
+#summaryBox ul li:hover{
+    list-style: none; 
+    font-size: 2rem;
+    background-color: rgb(221, 221, 221); 
+}
+
+
+#summaryBox ul li a{
+    text-decoration: none;
+    color: black;
+    display: block; 
+}
 
 
 /* <-----APPENDIX SECTION-----> */
@@ -94,10 +159,11 @@
 .contentSection{
     background-color: rgb(255, 255, 255);
     flex: 1;
-    padding: 100px 0 100px calc(min(20vw, 200px) + 2rem);
+    padding: 100px 0 100px calc(min(20vw, 200px));
     text-align: justify;
     font-size: 1.4rem;
     min-height: 100vh;
+    margin-bottom: 20vh;
 }
 
 .contentSection h1{
@@ -158,28 +224,124 @@
 /* <---Content Box---> */
 
 .contentBox1{
-    background-color: rgb(237, 237, 237);
-    /* border-radius: 1rem; */
-    /* border: var(--border); */
-    height: 25rem;
-    max-height: 30vw;
+    background-color: white;
     display: flex;
-    overflow: hidden;
-    transition: 0.3s;
     align-items: center;
+    justify-content: center;
+    /* overflow: hidden; */
+    transition: 0.3s;
+    flex-direction: column;
+    border-radius: 1rem;
+    border: 5px solid var(--clr-darkTheme);
 }
 
 .contentBox1 img{
-    height: 90%;
-    max-width: 40%;
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    height: 10rem;
+    max-height: 20%;
     object-fit: cover;
     object-position: center;
-    padding-left: 20px;
 }
 
-.contentBox1 p{
+.contentBox1 {
     padding: 20px;
-    font-size: 1.3rem;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* <---List Box---> */
+
+.listBox{
+    font-size: 2.8rem;
+    margin-left: 7rem;
+}
+
+.listBox p {
+  padding-left: 2rem;
+  font-weight: bold;
+}
+
+.listBox::before {     
+  content: '';
+  position: absolute;
+  left: 0;                             
+  width: 1rem;
+  max-width: 5%;
+  height: 100%;
+  background: rgb(255, 0, 0); 
+  z-index: -1;       
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.listBox2{
+    font-size: 1.8rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.listBox2 p {
+  padding-left: 2rem;
+  padding-top: 1rem;
+  /* padding-bottom: 1rem; */
+  font-weight: 300;
+  position: relative;
+}
+
+.listBox2 p::before {     
+  content: '';
+  position: absolute;
+  left: 0;                             
+  width: 1rem;
+  max-width: 5%;
+  height: 100%;
+  background: rgb(243, 215, 32); 
+  z-index: -1;       
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+#referenceList li:hover{
+    background-color: rgb(221, 221, 221);
+}
+
+#membersList{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+#membersList li{
+    display: inline-block;
+    border: var(--border);
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    flex: 1;
+    text-align: center;
+    box-shadow: 3px 3px 5px black;
+}
+
+#membersList .memberLi:hover{
+    background-color: rgb(221, 221, 221);
+    scale: 1.05;
+}
+
+
+#membersList #giaBao:hover{
+    background-color: rgb(250, 250, 114);
+    scale: 1.1;
+}
+
+/* <---Explain Box---> */
+.explainBox{
+    border: var(--border);
+    border-radius: 1rem;
+    padding: 1rem;
+    font-size: 2rem;
+    font-style: italic;
 }
 
 /* <---Question box---> */
@@ -243,13 +405,34 @@
 
 /* <---Images Div---> */
 
+.imagesSlider{
+    display: flex;
+    overflow: scroll;
+}
+
+.imagesSlider img{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    object-fit: cover;
+    object-position: top left;
+
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    height: clamp(30vh, 40rem, 45vw);
+    font-size: 1.1rem;
+    border: var(--border);
+}
+
 .singleImageDiv{
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     width: clamp(40vw, 50rem, 70vw);
     font-size: 1.1rem;
     border: var(--border);
@@ -391,6 +574,8 @@
     padding: 1rem;
     margin: 0.5rem;
     width: 40%;
+    flex-grow: 1;
+    font-size: 1.8rem;
 }
 
 
@@ -401,27 +586,7 @@ footer{
     font-size: 1rem;
 }
 
-/* <-----Template-----> */
 
-.divTemplate{
-    margin-top: 30px;
-}
-
-
-.animatedObj{
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 50%;
-}
-
-.hoverBox{
-    transition: 0.3s;
-}
-
-.hoverBox:hover{
-    box-shadow: 0 0 20px 0 rgb(144, 144, 144);
-    transform: translate(-3px, -5px);
-}
 
 /* <-----ANIMATION-----> */
 
@@ -494,10 +659,8 @@ footer{
         flex-grow: 2;
     }
 
-
-
-    .contentBox1{
-        height: 15rem;
+    .contentBox1 p{
+        font-size: 2.5rem;
     }
 
     .imageTemplate{
@@ -577,6 +740,42 @@ footer{
     .singleImageDiv{
         width: clamp(40vw, 50rem, 90vw);
     }   
+
+    .questionTitleDiv p{
+        font-size: 1.8rem;
+    }
+    .questionBox label{
+        font-size: 1.4rem;
+    }
+
+    .ansIndex{
+        width: 1.9rem;
+        height: 1.9rem;
+        margin-right: 1.9em;
+    }
+
+    .listBox{
+        font-size: 2.5rem;
+        margin-left: 6rem;
+    }
+
+    .listBox p {
+        padding-left: 1.8rem;
+    }
+
+    .listBox::before {                                
+        width: 0.8rem;
+    }
+
+    .listBox2{
+        font-size: 1.5rem;
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+
+    .listBox2 p::before {                                
+        width: 0.8rem;
+    }
 }
 
 
@@ -622,5 +821,49 @@ footer{
 
     .chartDialog h2{
         font-size: 1.5rem;
+    }
+
+    .questionTitleDiv p{
+        font-size: 1.5rem;
+    }
+
+    .ansIndex{
+        width: 1.8rem;
+        height: 1.8rem;
+        margin-right: 1.8rem;
+    }    
+    .contentBox1 p{
+        font-size: 2rem;
+    }
+
+    .listBox{
+        font-size: 1.8rem;
+        margin-left: 2rem;
+    }
+
+    .listBox p {
+        padding-left: 1.5rem;
+    }
+
+    .listBox::before {                                
+        width: 0.5rem;
+    }
+
+    .listBox::before {                                
+        width: 0.8rem;
+    }
+
+    .listBox2{
+        font-size: 1.4rem;
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+    }
+
+    .listBox2 p{
+        padding-left: 1rem;
+    }
+
+    .listBox2 p::before {                                
+        width: 0.5rem;
     }
 }
