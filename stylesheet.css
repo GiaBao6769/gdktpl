@@ -17,6 +17,11 @@
     margin: 2rem;
 }
 
+.flexDiv{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 
 .animatedObj{
     animation: appear linear;
@@ -258,6 +263,8 @@
 .listBox{
     font-size: 2.8rem;
     margin-left: 7rem;
+    margin-right: 5rem;
+    
 }
 
 .listBox p {
@@ -329,12 +336,14 @@
 #membersList .memberLi:hover{
     background-color: rgb(221, 221, 221);
     scale: 1.05;
+    transition: 0.2s;
 }
 
 
 #membersList #giaBao:hover{
     background-color: rgb(250, 250, 114);
     scale: 1.1;
+    transition: 0.2s;
 }
 
 /* <---Explain Box---> */
@@ -776,7 +785,7 @@ footer{
 
     .listBox{
         font-size: 2.5rem;
-        margin-left: 6rem;
+        margin-left: 5rem;
     }
 
     .listBox p {
