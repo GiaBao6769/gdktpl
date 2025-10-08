@@ -669,6 +669,7 @@ footer{
         display: flex;
         flex-wrap: nowrap;
         width: 100%;
+        
     }
 
 
@@ -825,6 +826,10 @@ footer{
 
     #bannerContent p{
         font-size: 1rem;
+    }
+
+    #appendixSection .navLink {
+        padding: 0.5rem;
     }
 
     .contentSection h2{
